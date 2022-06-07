@@ -17,34 +17,47 @@
 	    <a href="#">  Log-in  </a>
     </div><br><br><br>
     <!--	Header ends here -->
+
+
  <div class="sidebar">
-    <ul>
-    	<li><a href="#">Chowmein</a></li>
-    	<li><a href="#">Momo</a></li>
-    	<li><a href="#">Veg</a></li>
-    	<li><a href="#">Burger/Sandwich</a></li>
+    <ul class="sidebarContainer">
+    	<li><a href="#" onclick="showpanel(0)">Chowmein</a></li>
+    	<li><a href="#" onclick="showpanel(1)">Momo</a></li>
+    	<li><a href="#" onclick="showpanel(2)">Veg</a></li>
+    	<li><a href="#" onclick="showpanel(3)">Burger/Sandwich</a></li>
     </ul>
  </div>
 
-<!--
-    <div id="food-items" class="d-food-items">
-                <div id="Chowmein" class="d-Chowmein">
-                    <p id="category-name">Chowmein</p>    
-                </div>
 
-                <div id="Momo" class="d-Momo">
-                    <p id="category-name">Momo</p>    
-                </div>
 
-                <div id="Veg" class="d-Veg">
-                    <p id="category-name">Veg</p> 
-                </div>
+ <!-- linked page - nab bar-->
+ <div id="Chowmein" class="panel">
+  <h2>Chowmein</h2>
+  <button><div class="items"><img src="./image/chowmein/veg.png" style="width:65px;height:60px;"><br> Veg Chowmine<br>Cost: 100</div></button>
+  <button><div class="items"><img src="./image/chowmein/chicken.png" style="width:65px;height:60px;"><br> Veg Chowmine<br>Cost: 130</button>
+  <button><div class="items"><img src="./image/chowmein/buff.jpg" style="width:65px;height:60px;"><br> Veg Chowmine<br>Cost: 120</button>
+</div>
 
-                <div id="Burger" class="d-Burger">
-                    <p id="category-name">Burger/Sandwich</p> 
-                </div>
-    </div>
--->
+<div id="Momo" class="panel">
+  <h2>Momo</h2>
+ <button><div class="items"><img src="./image/momos/buff.jpg" style="width:65px;height:60px;"><br>Buff Momo<br>Cost: 100</div></button>
+  <button><div class="items"><img src="./image/momos/chicken.jpg" style="width:65px;height:60px;"><br>Chicken Momo<br>Cost: 130</button>
+</div>
+
+<div id="Veg" class="panel">
+  <h2>Veg</h2>
+   <button><div class="items"><img src="./image/veg/fries.jpg" style="width:65px;height:60px;"><br>Fries<br>Cost: 100</div></button>
+  <button><div class="items"><img src="./image/veg/salad.jpg" style="width:65px;height:60px;"><br>Salad<br>Cost: 100</button>
+  <button><div class="items"><img src="./image/veg/tikka.jpg" style="width:65px;height:60px;"><br>Paneer Tikka<br>Cost: 150</button>
+</div>
+<div id="Burger" class="panel">
+  <h2>Burger/Sandwich</h2>
+  <button><div class="items"><img src="./image/burger/cheese.jpg" style="width:65px;height:60px;"><br>Buff Momo<br>Cost: 100</div></button>
+  <button><div class="items"><img src="./image/burger/cheese_sand.png" style="width:65px;height:60px;"><br>Chicken Momo<br>Cost: 130</button>
+  	<button><div class="items"><img src="./image/burger/chicken.jpg" style="width:65px;height:60px;"><br>Buff Momo<br>Cost: 100</div></button>
+  <button><div class="items"><img src="./image/burger/chicken_sand.png" style="width:65px;height:60px;"><br>Chicken Momo<br>Cost: 130</button>
+</div><div class="adjust"></div>
+
 
     <!--	Footer starts here -->
 <footer> <h3>Minor Project</h3>
@@ -55,5 +68,17 @@
 </h5>
  </footer>
  <!--	Footer starts here -->
+ <script>
+ 	var listlinks-document.querySelectorAll(".sidebar .sidebarContainer li")
+var listpanel-document.querySelectorAll(".sidebar .panel")
+function showpanel(panelIndex){
+	listpanel.forEach(function(node){
+		node.style.display-"none";
+	});
+		listpanel[panelIndex].style.display-"block";
+
+}
+showpanel(3);
+ </script>
 </body>
 </html>

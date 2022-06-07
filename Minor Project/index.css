@@ -4,7 +4,7 @@ body{
 	padding: 0;
 }
 header,footer{
-	position: absolute;
+	position: fixed;
 	background-color: #c9780e;
 	width: 100%;
 	color: white;
@@ -33,7 +33,7 @@ header img{
 } 
 
 .options{
-	position: absolute;
+	position: fixed;
 	width: 100% ;
 
 }
@@ -46,9 +46,6 @@ header img{
 	margin-right: 20px;
 }
 
-.options:hover a{
-	padding-top: 10px;
-}
 .d-food-items{
 	 font-weight: bold;
 
@@ -79,4 +76,10 @@ header img{
 
 ul li:hover a{
 	padding-left: 30px;
+}
+.panel{
+	margin-left:255px;
+}
+.adjust{
+	margin-bottom:20%;
 }
