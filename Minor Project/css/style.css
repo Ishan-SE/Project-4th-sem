@@ -49,6 +49,7 @@ a:hover{
 }
 h3{
     font-size:  2rm;
+
 }
 h2{
     color:#232933 ;
@@ -120,8 +121,14 @@ h2{
     padding: 4% 0;
 
 }
+.float-text{
+    text-align:auto;
+    width: 60%;
+    size: 70%;
+
+}
 .box{
-    border:1px solid black ;
+
     width: 29%;
     float: left;
     margin: 2%;
@@ -168,4 +175,46 @@ h2{
 .socials ul li{
     display: inline;
     padding: 1%;
+}
+
+
+
+/* for moile */
+@media only screen and (max-width:768px){
+.image{
+    margin-left: 40%;
+    width: 90%;
+    float: none;
+}
+.nab-menu ul{
+    list-style: none;
+    text-align: center;
+}
+.food-search input[type="search"]{
+    width: 90%;
+    margin-bottom: 5%;
+    padding: 2%;
+}
+.button{
+    padding: 2%;
+    width: 80%;
+}
+.box{
+   
+    width: 90%;
+    margin: 4% auto;
+    float: left;
+    margin: 2%;
+}
+.float-text{
+    text-align:auto;
+    width: 60%;
+    size: 70%;
+}
+.food_menu{
+    padding: 5% 0;
+    width: 90%;
+}
+
+
 }
