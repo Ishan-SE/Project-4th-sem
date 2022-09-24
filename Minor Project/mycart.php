@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8"> 
@@ -23,39 +25,61 @@
         <li> <a href="./about.html">About</a>  </li>
         <li> <a href="./foods.html">Foods</a>  </li>
         <li> <a href="./mycart.php" class="btn btn-outline-success">My Cart</a>  </li>
-        <li> <a href="./contacts.html">Log-in</a>  </li>
+        <li> <a href="./admin/login.php">Log-in</a>  </li>
       </ul>
     </div>
     <div class="space-fix"></div>
     </div>
 </section>
 
-<h1> Details  will be here</h1>
-made by <br>
-address <br>
-etc <br>
 
- <!--  Socials  -->
+<table>
+  <tr>
+    <th>S no.</th>
+    <th>Item Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Remove</th>
+  </tr>
+ <?php
+ $total=0;
+ if(isset($_SESSION['Cart']))
+ {
+ foreach ($_SESSION['Cart'] as $key => $value) {
+  $total=$total+$value['Price'];
+  $sr=$key+1;
+   echo"
+   <tr>
+   <td>$sr</td>
+   <td>$value[Item_Name]</td>
+   <td>$value[Price]</td>
+   <td>
+   
+   <input type='number' value='$value[Quantity]' min='1' max='10'>
+   
+   </td>
+   <td>
+   <form action='manage_cart.php' method='POST')>
+   <button name='Remove_Item'>REMOVE</button>
+   <input type='hidden' name='Item_Name' value='$value[Item_Name]'>
+   </form>
+   </td>
+   </tr>
+   ";
+ }
+}
+ ?>
+</table>
 
- <section class="socials">
-    <div class="container text-center">
-        <ul>
-            <li>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-            </li>
-        </ul>
-    </div> 
-</section>
+<div>
+<h3>Total:</h3>
+<h5><?php echo $total ?></h5>
+<form>
+  <button class="button btn-primary">Place Order</button>
+</form>
+  </div>
 
- <!--  Footer  -->
 
- <section class="Footer">
-    <div class="container text-center">
-        <p>All rights reserved. Desined by tream-Paskim</p>
-    </div>  
-</section>
 
 
 </body>

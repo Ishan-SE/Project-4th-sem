@@ -23,8 +23,8 @@
         <li> <a href="./index.html">Home</a>  </li>
         <li> <a href="./about.html">About</a>  </li>
         <li> <a href="./foods.html">Foods</a>  </li>
-        <li> <a href="./mycart.php" class="btn btn-outline-success">My Cart (0)</a>  </li>
-        <li> <a href="./contacts.html">Log-in</a>  </li>
+        <li> <a href="./mycart.php" class="btn btn-outline-success">My Cart</a>  </li>
+        <li> <a href="./admin/login.php">Log-in</a>  </li>
       </ul>
     </div>
     <div class="space-fix"></div>
@@ -49,6 +49,7 @@
         <h2 class="text-center"> MOMO</h2>
 
 
+         <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/momos/buff-momo.jpg" alt="buff momo" class="img-responsive img-curve">
@@ -56,14 +57,15 @@
             <div class="food_menu_disc">
                 <h4>Buff Momo</h4>
                 <p class="price">Rs 90</p>
-                <p class="detail">Buff Steam Mo:Mo with Hot Soup</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <p class="detail">Steam Buff Momo</p><br>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Buff momo">
+                <input type="hidden" name="Price" value="90">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
-
-        
+         <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/momos/chicken.jpg" alt="chicken momo" class="img-responsive img-curve">
@@ -72,13 +74,15 @@
                 <h4>Chicken Momo</h4>
                 <p class="price">Rs 110</p>
                 <p class="detail">Chicken Steam Mo:Mo with Hot Soup</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Chicken Momo">
+                <input type="hidden" name="Price" value="110">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
 
-
+         <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/momos/veg-momo.jpg" alt="veg" class="img-responsive img-curve">
@@ -87,12 +91,14 @@
                 <h4>Veg Momo</h4>
                 <p class="price">Rs 90</p>
                 <p class="detail">Veg. Steam Mo:Mo with Hot Soup</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="veg Momo">
+                <input type="hidden" name="Price" value="90">
             </div>
             <div class="space-fix"></div>
-        </div>
-        
+        </div></form>
 
+         <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/momos/chickenchilli.jpeg" alt="chickenchilli" class="img-responsive img-curve">
@@ -101,10 +107,14 @@
                 <h4>Chilli Momo</h4>
                 <p class="price">Rs 150</p>
                 <p class="detail">Chicken Chilly Mo:Mo</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Chilli Momo">
+                <input type="hidden" name="Price" value="150">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
+
+
 
         <div class="space-fix"></div>
     </div>  
@@ -114,6 +124,7 @@
         <h2 class="text-center"> Chowmein</h2>
 
 
+   <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/chowmein/buff.jpg" alt="buff chowmin" class="img-responsive img-curve">
@@ -122,12 +133,16 @@
                 <h4>Buff Chowmein</h4>
                 <p class="price">Rs 100</p>
                 <p class="detail">Buff Chowmein</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Buff Chowmein">
+                <input type="hidden" name="Price" value="100">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
 
+
+         <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/chowmein/chicken.png" alt="chicken chowmein" class="img-responsive img-curve">
@@ -136,10 +151,14 @@
                 <h4>Chicken Chowmein</h4>
                 <p class="price">Rs 110</p>
                 <p class="detail">Chicken Chowmein</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Chicken Chowmein">
+                <input type="hidden" name="Price" value="110">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
+
+           <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/chowmein/veg.png" alt="veg chowmein" class="img-responsive img-curve">
@@ -148,10 +167,12 @@
                 <h4>Veg. Chowmein</h4>
                 <p class="price">Rs 100</p>
                 <p class="detail">Veg Chowmein</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Veg Chowmein">
+                <input type="hidden" name="Price" value="100">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
 
         <div class="space-fix"></div>
@@ -162,7 +183,7 @@
     <div class="container">
         <h2 class="text-center">Burger</h2>
 
-
+             <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/burger/chicken.jpg" alt="Chicken" class="img-responsive img-curve">
@@ -170,13 +191,16 @@
             <div class="food_menu_disc">
                 <h4>Chicken Burger</h4>
                 <p class="price">Rs 250</p>
-                <p class="detail">Served with Dip & Fries</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <p class="detail">Served with Meo & Fries</p><br>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Chicken Burger">
+                <input type="hidden" name="Price" value="250">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
 
+        <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/burger and sandwtch/cheese.jpg" alt="cheese" class="img-responsive img-curve">
@@ -184,13 +208,15 @@
             <div class="food_menu_disc">
                 <h4>Cheese Burger</h4>
                 <p class="price">Rs 250</p>
-                <p class="detail">Burger with extra cheese & fries </p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <p class="detail">Served with Meo & Fries</p><br>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Cheese Burger">
+                <input type="hidden" name="Price" value="250">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
-        
+               <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/burger/chicken_sand.png" alt="fries" class="img-responsive img-curve">
@@ -199,12 +225,15 @@
                 <h4>Chicken Sandwitch</h4>
                 <p class="price">Rs 120</p>
                 <p class="detail"> Chicken Cheese Sandwich</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Chicken Cheese Sandwich">
+                <input type="hidden" name="Price" value="120">
             </div>
             <div class="space-fix"></div>
-        </div>
-        
+        </div></form>
 
+           
+                    <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/burger and sandwtch/veg.jpg" alt="Veg Burger" class="img-responsive img-curve">
@@ -213,10 +242,13 @@
                 <h4>Veg Burger</h4>
                 <p class="price">Rs 225</p>
                 <p class="detail">Served with Dip & Fries</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Veg Burge">
+                <input type="hidden" name="Price" value="225">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
+        
 
         <div class="space-fix"></div>
     </div>  
@@ -226,6 +258,7 @@
     <div class="container">
         <h2 class="text-center">Extra/Side</h2>
 
+                     <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/veg/choila.jpg" alt="choila" class="img-responsive img-curve">
@@ -234,13 +267,15 @@
                 <h4>Choila</h4>
                 <p class="price">Rs 200</p>
                 <p class="detail">Mutton Choila with chuira</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Choila">
+                <input type="hidden" name="Price" value="200">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
-        
-        <div class="food_menu">
+            <form action="manage_cart.php" method="POST">
+       <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/veg/fries.jpg" alt="fries" class="img-responsive img-curve">
             </div>
@@ -248,13 +283,15 @@
                 <h4>Fries</h4>
                 <p class="price">Rs 120</p>
                 <p class="detail">French Fries </p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Fries">
+                <input type="hidden" name="Price" value="120">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
-
-        <div class="food_menu">
+  <form action="manage_cart.php" method="POST">
+       <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/veg/salad.jpg" alt="Salad" class="img-responsive img-curve">
             </div>
@@ -262,13 +299,14 @@
                 <h4>Salad</h4>
                 <p class="price">Rs 150</p>
                 <p class="detail">A mix of finely chopped Vegetables</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Salad">
+                <input type="hidden" name="Price" value="150">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
-
-
+          <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/veg/tikka.jpg" alt="Tikka" class="img-responsive img-curve">
@@ -277,10 +315,13 @@
                 <h4>Tikka</h4>
                 <p class="price">Rs 200</p>
                 <p class="detail">Tikka per stick</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Tikka">
+                <input type="hidden" name="Price" value="200">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
+
 
         
         <div class="space-fix"></div>
