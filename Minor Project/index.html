@@ -22,6 +22,7 @@
         <li> <a href="./index.html">Home</a>  </li>
         <li> <a href="./about.html">About</a>  </li>
         <li> <a href="./foods.html">Foods</a>  </li>
+        <li> <a href="./mycart.php" class="btn btn-outline-success">My Cart (0)</a>  </li>
         <li> <a href="./contacts.html">Log-in</a>  </li>
       </ul>
     </div>
@@ -72,6 +73,9 @@
  <section class="menu">
     <div class="container">
         <h2 class="text-center"> Our Menu</h2>
+
+
+        <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/momos/buff-momo.jpg" alt="buff momo" class="img-responsive img-curve">
@@ -80,11 +84,16 @@
                 <h4>Buff Momo</h4>
                 <p class="price">Rs 90</p>
                 <p class="detail">Steam Buff Momo</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <button type="submit" name="Order_now" href="#" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Buff momo">
+                <input type="hidden" name="Item_Name" value="90">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
+
+
+        <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/chowmein/veg.png" alt="veg chowmein" class="img-responsive img-curve">
@@ -92,12 +101,17 @@
             <div class="food_menu_disc">
                 <h4>Veg. Chowmein</h4>
                 <p class="price">Rs 100</p>
-                <p class="detail"> Veg Chowmein</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <p class="detail">Veg Chowmein</p><br>
+                <button type="submit" name="Order_now" href="#" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Buff momo">
+                <input type="hidden" name="Item_Name" value="90">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
+
+
+        <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/burger and sandwtch/cheese.jpg" alt="cheese" class="img-responsive img-curve">
@@ -105,12 +119,18 @@
             <div class="food_menu_disc">
                 <h4>Cheese Burger</h4>
                 <p class="price">Rs 250</p>
-                <p class="detail"> Chicken Cheese Sandwich</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <p class="detail">Chicken Cheese Burger</p><br>
+                <button type="submit" name="Order_now" href="#" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Buff momo">
+                <input type="hidden" name="Item_Name" value="90">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
 
+
+
+
+        <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
                 <img src="./image/veg/fries.jpg" alt="fries" class="img-responsive img-curve">
@@ -118,11 +138,16 @@
             <div class="food_menu_disc">
                 <h4>Fries</h4>
                 <p class="price">Rs 120</p>
-                <p class="detail"> French Fries</p><br>
-                <a href="#" class="button btn-primary">Order now</a>
+                <p class="detail">French Fries</p><br>
+                <button type="submit" name="Order_now" href="#" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value="Buff momo">
+                <input type="hidden" name="Item_Name" value="90">
             </div>
             <div class="space-fix"></div>
-        </div>
+        </div></form>
+
+       
+
         
         <div class="space-fix"></div>
     </div>  
