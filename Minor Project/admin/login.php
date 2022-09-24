@@ -7,27 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>LOG IN</title>
 	<link rel="stylesheet" type="text/css" href="../css/admin.css">
-	<link rel="stylesheet" href="../css/style.css">
 </head>
-<section class="nab-bar">
-    <div class="container">
-        <div class="image">
-            <img src="../image/logo/logo.png" alt="Logo image" style="width: 70px; height: 65px;">
-    </div>
-    
-       <div>
-     <div class="nab-menu text-right">
-      <ul>
-        <li> <a href="../index.html">Home</a>  </li>
-        <li> <a href="../about.html">About</a>  </li>
-        <li> <a href="../foods.html">Foods</a>  </li>
-        <li> <a href="../mycart.php" class="btn btn-outline-success">My Cart (0)</a>  </li>
-        <li> <a href="../admin/login.php">Log-in</a>  </li>
-      </ul>
-    </div>
-    <div class="space-fix"></div>
-    </div>
-</section>
 <body>
 	<div class="login">
 		<h1 class="text-center">Login</h1>

@@ -24,16 +24,19 @@ session_start();
         <li> <a href="./index.html">Home</a>  </li>
         <li> <a href="./about.html">About</a>  </li>
         <li> <a href="./foods.html">Foods</a>  </li>
-        <li> <a href="./mycart.php" class="btn btn-outline-success">My Cart</a>  </li>
+        <li> <a href="./mycart.php" >My Cart</a>  </li>
         <li> <a href="./admin/login.php">Log-in</a>  </li>
       </ul>
     </div>
     <div class="space-fix"></div>
     </div>
 </section>
+<hr class="hrr">
 
 
-<table>
+<section class="menu">
+  <div class="login">
+<table class="text-center">
   <tr>
     <th>S no.</th>
     <th>Item Name</th>
@@ -70,17 +73,36 @@ session_start();
 }
  ?>
 </table>
-
-<div>
-<h3>Total:</h3>
-<h5><?php echo $total ?></h5>
+</div>
+</section>
+<div class="total">
+<h3>Total:</h3><br>
+<h5><?php echo $total ?></h5><br>
 <form>
   <button class="button btn-primary">Place Order</button>
 </form>
   </div>
 
 
+ <section class="socials">
+    <div class="container text-center">
+        <ul>
+            <li>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </li>
+        </ul>
+    </div> 
+</section>
 
+ <!--  Footer  -->
+
+ <section class="Footer">
+    <div class="container text-center">
+        <p>All rights reserved. Desined by tream-Paskim</p>
+    </div>  
+</section>
 
 </body>
 </html>

@@ -30,6 +30,12 @@ a:hover{
     color: #c98128;
     padding: 1px;
 }
+.hrr{
+    height: 3px;
+    color: grey;
+    background-color: black;
+
+}
 
 .text-center{
     text-align: center;
@@ -173,7 +179,31 @@ h2{
     padding: 1%;
 }
 
+/* for Table */
+table, td, th {
+  border: 1px solid black;
 
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th {
+  text-align: center;
+    padding: 15px;
+}
+td {
+  padding: 15px;
+}
+.login{
+    padding-left: 9%;
+    align-content: center;
+}
+
+.total{
+    padding-left: 15%;
+}
 
 /* for moile */
 @media only screen and (max-width:768px){
