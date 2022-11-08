@@ -64,7 +64,7 @@ session_start();
    <td>
    <form action='manage_cart.php' method='POST')>
    <button name='Remove_Item'>REMOVE</button>
-   <input type='hidden' name='Item_Name' value='$value[Item_Name]'>
+   <input type='hidden' name='Item_Name' value='$value[Item_Name]' required>
    </form>
    </td>
    </tr>
@@ -75,13 +75,44 @@ session_start();
 </table>
 </div>
 </section>
-<div class="total">
+
+
+
+
+
+<section class="catagories">
+  <form action="connect.php" method="POST">
+<div class="food_menu"><h4>
+<label for= "name">Name</label>
+<input type="text" class="price" id="name"  name="name" required><br>
+
+<label for= "address">Address</label>
+<input type="text" class="price" id="address"  name="address" required><br>
+
+<label for= "email">Email</label>
+<input type="email" class="price" id="email"  name="email" required><br>
+
+<label for= "phone">Phone no:</label>
+<input type="number" class="price" id="phone"  name="phone" required><br>
+</h4>
+
+</div>
+
+</section>
+
+<div class="total , catagories">
 <h3>Total:</h3><br>
 <h5><?php echo $total ?></h5><br>
-<form>
+
   <button class="button btn-primary">Place Order</button>
 </form>
+<div class="space-fix"></div>
   </div>
+
+
+
+
+
 
 
  <section class="socials">
