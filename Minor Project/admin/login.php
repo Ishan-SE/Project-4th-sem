@@ -7,8 +7,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>LOG IN</title>
 	<link rel="stylesheet" type="text/css" href="../css/admin.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+	<section class="nab-bar">
+    <div class="container">
+        <div class="image">
+            <img src="../image/logo/logo.png" alt="Logo image" style="width: 70px; height: 65px;">
+    </div>
+    
+
+       <div>
+     <div class="nab-menu text-right">
+      <ul>
+        <li> <a href="../index.php">Home</a>  </li>
+        <li> <a href="../about.html">About</a>  </li>
+        <li> <a href="../foods.php">Foods</a>  </li>
+        <li> <a href="../mycart.php" class="btn btn-outline-success">My Cart</a>  </li>
+        <li> <a href="./admin/login.php">Log-in</a>  </li>
+      </ul>
+    </div>
+    <div class="space-fix"></div>
+    </div>
+</section>
 	<div class="login">
 		<h1 class="text-center">Login</h1>
 		<br><br>
@@ -38,8 +59,29 @@ if(isset($_SESSION['login']))
 	<input type="submit" name="submit" value="login" class="btn-primary"><br><br>
 </form>
 
-		<p class="text-center">Paskim group</p>
+		
 	</div>
+
+ <section class="socials">
+    <div class="container text-center">
+        <ul>
+            <li>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </li>
+        </ul>
+    </div> 
+</section>
+
+ <!--  Footer  -->
+
+ <section class="Footer">
+    <div class="container text-center">
+        <p>All rights reserved. Designed by team-Paskim</p>
+    </div>  
+</section>
+
 
 </body>
 </html>

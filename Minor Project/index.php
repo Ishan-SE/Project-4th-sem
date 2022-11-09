@@ -1,5 +1,6 @@
 <?php 
-se
+session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8"> 
@@ -20,9 +21,9 @@ se
        <div>
      <div class="nab-menu text-right">
       <ul>
-        <li> <a href="./index.html">Home</a>  </li>
+        <li> <a href="./index.php">Home</a>  </li>
         <li> <a href="./about.html">About</a>  </li>
-        <li> <a href="./foods.html">Foods</a>  </li>
+        <li> <a href="./foods.php">Foods</a>  </li>
        <li><a href="./mycart.php" class="btn btn-outline-success">My Cart</a>  </li>
          <li> <a href="./admin/login.php">Log-in</a>  </li>
       </ul>
@@ -34,12 +35,60 @@ se
  <!-- START search section -->
 <section class="food-search text-center">
     <div class="container">
-    <form action="">
+    <form method="POST">
         <input type="search" name="search" placeholder="Search an item..">
-        <input type="submit" name="submit" value="Search" class="button btn-primary">
+        <input type="submit" name="submit" value="search" class="button btn-primary">
      </form>
     </div>
 </section>
+
+<?php 
+$con = new PDO("mysql:host=localhost;dbname=food-menu",'root','',);
+
+if(isset($_POST["submit"])){
+    $str = $_POST["search"];
+    $sth = $con ->prepare("SELECT * FROM `list` WHERE Name= '$str' ");
+
+    $sth->setFetchMode(PDO::FETCH_OBJ);
+    $sth->execute();
+
+    if($row = $sth->fetch() )
+      {
+         ?>
+         <section class="menu">
+    <div class="container">
+        <h2 class="text-center">Searched Item</h2>
+
+         <form action="manage_cart.php" method="POST">
+        <div class="food_menu">
+            <div class="food_menu_img"> 
+                <img src=<?php echo $row->image; ?> alt= <?php echo $row->name; ?> class="img-responsive img-curve">
+            </div>
+            <div class="food_menu_disc">
+                <h4><?php echo $row->name; ?></h4>
+                <p class="price"><?php echo $row->price; ?></p>
+                <p class="detail"><?php echo $row->discription; ?></p><br>
+                <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
+                <input type="hidden" name="Item_Name" value=<?php echo $row->name; ?>>
+                <input type="hidden" name="Price" value=<?php echo $row->price; ?>>
+            </div>
+            <div class="space-fix"></div>
+        </div></form>
+        <div class="space-fix"></div>
+
+        </div>  
+</section>
+<?php
+
+      }
+      
+      else{
+       ?> <section class="menu"> <div class="container"><h2 class="text-center">Item Not Found</h2></div></section>
+       <?php
+      }
+}
+?>
+
 <!-- END search section -->
 
     <!--  Catagories  -->
@@ -47,19 +96,19 @@ se
 <section class="catagories">
     <div class="container">
         <h2 class="text-center">Catagories</h2>
-        <a href="#">
+        <a href="./foods.php">
         <div class="box float-container">
             <img src="./image/momos/chicken.jpg" alt="momos" class="img-responsive img-curve">
             <h3 class="float-text ">MOMOS</h3>
         </div>
         </a>
-        <a href="#">
+        <a href="./foods.php">
         <div class="box float-container">
             <img src="./image/chowmein/chicken.png" alt="chowmein" class="img-responsive img-curve">
             <h3 class="float-text ">CHOWMEIN</h3>
         </div>
         </a>
-        <a href="#">
+        <a href="./foods.php">
         <div class="box float-container">
             <img src="./image/burger and sandwtch/chicken.jpg" alt="burger" class="img-responsive img-curve">
             <h3 class="float-text ">BURGER</h3>

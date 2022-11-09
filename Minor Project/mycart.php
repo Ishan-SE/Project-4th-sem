@@ -21,9 +21,9 @@ session_start();
        <div>
      <div class="nab-menu text-right">
       <ul>
-        <li> <a href="./index.html">Home</a>  </li>
+        <li> <a href="./index.php">Home</a>  </li>
         <li> <a href="./about.html">About</a>  </li>
-        <li> <a href="./foods.html">Foods</a>  </li>
+        <li> <a href="./foods.php">Foods</a>  </li>
         <li> <a href="./mycart.php" >My Cart</a>  </li>
         <li> <a href="./admin/login.php">Log-in</a>  </li>
       </ul>
