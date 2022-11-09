@@ -58,7 +58,7 @@ session_start();
    <td>$value[Price]</td>
    <td>
    
-   <input type='number' value='$value[Quantity]' min='1' max='10'>
+   <input type='number' value='$value[Quantity]' min='1' max='10' >
    
    </td>
    <td>

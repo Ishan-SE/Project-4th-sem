@@ -11,6 +11,7 @@ foreach ($_SESSION['Cart'] as $key => $value){
   $json = json_encode($value['Item_Name']); 
   $items .= $json;
 }
+echo ($items);
 
 $total=0;
  if(isset($_SESSION['Cart']))
