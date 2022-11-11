@@ -110,7 +110,7 @@ if(isset($_POST["submit"])){
         </a>
         <a href="./foods.php">
         <div class="box float-container">
-            <img src="./image/burger and sandwtch/chicken.jpg" alt="burger" class="img-responsive img-curve">
+            <img src="./image/burgerSand/chicken.jpg" alt="burger" class="img-responsive img-curve">
             <h3 class="float-text ">BURGER</h3>
         </div>
         </a>
@@ -165,7 +165,7 @@ if(isset($_POST["submit"])){
         <form action="manage_cart.php" method="POST">
         <div class="food_menu">
             <div class="food_menu_img"> 
-                <img src="./image/burger and sandwtch/cheese.jpg" alt="cheese" class="img-responsive img-curve">
+                <img src="./image/burgerSand/cheese.jpg" alt="cheese" class="img-responsive img-curve">
             </div>
             <div class="food_menu_disc">
                 <h4>Cheese Burger</h4>

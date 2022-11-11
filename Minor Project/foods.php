@@ -71,7 +71,7 @@ if(isset($_POST["submit"])){
                 <p class="price"><?php echo $row->price; ?></p>
                 <p class="detail"><?php echo $row->discription; ?></p><br>
                 <button type="submit" name="Order_now" class="button btn-primary">Order now</button>
-                <input type="hidden" name="Item_Name" value=<?php echo $row->name; ?>>
+                <input type="hidden" name="Item_Name" value=<?php echo`$row->name;` ?>>
                 <input type="hidden" name="Price" value=<?php echo $row->price; ?>>
             </div>
             <div class="space-fix"></div>

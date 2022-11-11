@@ -11,7 +11,7 @@ foreach ($_SESSION['Cart'] as $key => $value){
   $json = json_encode($value['Item_Name']); 
   $items .= $json;
 }
-echo ($items);
+
 
 $total=0;
  if(isset($_SESSION['Cart']))
@@ -29,10 +29,10 @@ if($conn->connect_error){
       	values(?,?,?,?,?,?)");
       $stmt->bind_param("sssisi",$name, $address, $email, $phone, $items, $total);
       $stmt->execute();
-   // echo"<script>
-	//  alert('Order Submitted Sucessfully.....');
-	//  window.location.href='mycart.php';
-	//	</script>";
+   echo"<script>
+	alert('Order Submitted Sucessfully.....');
+	window.location.href='mycart.php';
+	</script>";
       session_unset();
       $stmt->close();
       $conn->close();
