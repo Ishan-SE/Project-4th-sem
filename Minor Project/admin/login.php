@@ -10,26 +10,35 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-	<section class="nab-bar">
+
+
+<section class="nab-bar">
     <div class="container">
         <div class="image">
             <img src="../image/logo/logo.png" alt="Logo image" style="width: 70px; height: 65px;">
     </div>
     
-
        <div>
      <div class="nab-menu text-right">
       <ul>
         <li> <a href="../index.php">Home</a>  </li>
         <li> <a href="../about.html">About</a>  </li>
         <li> <a href="../foods.php">Foods</a>  </li>
-        <li> <a href="../mycart.php" class="btn btn-outline-success">My Cart</a>  </li>
-        <li> <a href="./admin/login.php">Log-in</a>  </li>
+       <li><a href="../mycart.php" class="btn btn-outline-success">My Cart</a>  </li>
+         <li> <a href="./admin/login.php">Log-in</a>  </li>
       </ul>
     </div>
     <div class="space-fix"></div>
     </div>
 </section>
+
+
+
+
+
+
+
+
 	<div class="login">
 		<h1 class="text-center">Login</h1>
 		<br><br>
@@ -103,13 +112,13 @@ if(isset($_POST['submit']))
 
 		$_SESSION['login'] = "<div class='success text-center'>Login Success</div>";
 		$_SESSION['user'] = $username;
-		header('location:'.SITEURL.'admin/');
+		header('location:'.SITEURL.'Project-4th-sem/Minor Project/admin/manage-admin.php');
 
 	}
 	else
 	{
         $_SESSION['login'] = "<div class='error text-center'>Login Failed</div>";
-		header('location:'.SITEURL.'admin/login.php');
+		header('location:'.SITEURL.'Project-4th-sem/Minor Project/admin/login.php');
 
 	}
 }

@@ -19,7 +19,7 @@ $full_name = $row['full_name'];
 $username = $row['username'];
 }	
 else{
-	header('location'.SITEURL.'admin/manage-admin.php');
+	header('location'.SITEURL.'Project-4th-sem/Minor Project/admin/manage-admin.php');
 }
 }
 
@@ -71,12 +71,12 @@ $res = mysqli_query($conn, $sql);
 if($res==true)
 {
 $_SESSION['update']="<div class='success'>Admin updated</div>";
-header('location:'.SITEURL.'admin/manage-admin.php');
+header('location:'.SITEURL.'Project-4th-sem/Minor Project/admin/manage-admin.php');
 }
 else
 {
 $_SESSION['update']="<div class='error'>Admin updated Failed</div>";
-header('location:'.SITEURL.'admin/manage-admin.php');
+header('location:'.SITEURL.'Project-4th-sem/Minor Project/admin/manage-admin.php');
 
 }
 

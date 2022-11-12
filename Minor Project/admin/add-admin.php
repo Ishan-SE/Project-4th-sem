@@ -66,12 +66,12 @@ $res = mysqli_query($conn, $sql) or die(mysqli_error());
 
 if($res = TRUE){
 $_SESSION['add'] = "<div class='success'>Admin Added.</div>";
-header("location:".SITEURL.'admin/manage-admin.php');
+header("location:".SITEURL.'Project-4th-sem/Minor Project/admin/manage-admin.php');
 } 
 else{
 
 $_SESSION['add'] = "<div class='error'>Admin Not Added</div>";
-header("location:".SITEURL.'admin/add-admin.php');
+header("location:".SITEURL.'Project-4th-sem/Minor Project/admin/add-admin.php');
 }
 	
 

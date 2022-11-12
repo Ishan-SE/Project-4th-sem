@@ -1,67 +1,119 @@
-<?php include('partials/menu.php'); ?>
+<?php include('partials/menu.php'); 
+$con=new mysqli('localhost','root', '','costumer-order'); 
+
+?>
 
 
 <div class="main-content">
-	<div class="wrapper">
-			<h1>MANAGE ORDER</h1>
-			
+	
+
+	<div>
+  <h2> Active </h2>  
+
+<table class="text-center">
+	<thead>
+  <tr>
+    <th>S no.</th>
+    <th>Item Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Items</th>
+    <th>Total</th>
+  </tr>
+  </thead>
+  <tbody>
+  	<?php
+      $sql = "Select * from `orders` where activity = 1";
+      $result=mysqli_query($con,$sql);
+      if($result){
+      	while($row=mysqli_fetch_assoc($result)){
+      		$id=$row['id'];
+      		$name=$row['name'];
+      		$address=$row['address'];
+      		$email=$row['email'];
+      		$phone=$row['phone'];
+      		$items=$row['items'];
+      		$total=$row['total'];
+      		echo '
+             <tr>
+             <td>'.$id.'</td>
+             <td>'.$name.'</td>
+             <td>'.$address.'</td>
+             <td>'.$email.'</td>
+             <td>'.$phone.'</td>
+             <td>'.$items.'</td>
+             <td>'.$total.'</td>
+             <td>
+	             <button><a href="mark-order.php?doneid='.$id.'">Done</a></button>
+	             <button><a href="delete-order.php?deleteid='.$id.'">Delete</a></button>
+             </td>
+             </tr>
+             
+
+      		';
+
+      	}
+      }
+  	?>
+  </tbody>
+ 
+  
+</table>
+
+<h2> Done </h2> 
+<table class="text-center">
+	<thead>
+  <tr>
+    <th>S no.</th>
+    <th>Item Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Items</th>
+    <th>Total</th>
+  </tr>
+  </thead>
+  <tbody>
+  	<?php
+      $sql = "Select * from `orders` where activity = 0";
+      $result=mysqli_query($con,$sql);
+      if($result){
+      	while($row=mysqli_fetch_assoc($result)){
+      		$id=$row['id'];
+      		$name=$row['name'];
+      		$address=$row['address'];
+      		$email=$row['email'];
+      		$phone=$row['phone'];
+      		$items=$row['items'];
+      		$total=$row['total'];
+      		echo '
+             <tr>
+             <td>'.$id.'</td>
+             <td>'.$name.'</td>
+             <td>'.$address.'</td>
+             <td>'.$email.'</td>
+             <td>'.$phone.'</td>
+             <td>'.$items.'</td>
+             <td>'.$total.'</td>
+             <td>
+	             
+	             <button><a href="delete-order.php?deleteid='.$id.'">Delete</a></button>
+             </td>
+             </tr>
+             
+
+      		';
+
+      	}
+      }
+  	?>
+  </tbody>
+ 
+  
+</table>
 
 
-
-		<table class="tbl-full">
-			<tr>
-				<th>S.N.</th>
-				<th>Full Name</th>
-				<th>Username</th>
-				<th>Actions</th>
-
-			</tr>
-			<tr>
-				<td>1.</td>
-				<td>Paskim</td>
-				<td>Paskim1</td>
-				<td>
-					
-					<a href="#"class="btn-secondary">Update Order</a>			
-					<a href="#"class="btn-danger">Delete Order</a>			
-				</td>
-
-			</tr>
-			<tr>
-				<td>1.</td>
-				<td>Paskim</td>
-				<td>Paskim1</td>
-				<td>
-					
-					
-					<a href="#"class="btn-secondary">Update Order</a>			
-                    <a href="#"class="btn-danger">Delete Order</a>
-				</td>
-
-			</tr>
-			<tr>
-				<td>1.</td>
-				<td>Paskim</td>
-				<td>Paskim1</td>
-				<td>
-					
-					<a href="#"class="btn-secondary">Update Order</a>			
-                    <a href="#"class="btn-danger">Delete Order</a>
-				</td>
-
-			</tr>
-			<tr>
-				<td>1.</td>
-				<td>Paskim</td>
-				<td>Paskim1</td>
-				<td>
-					
-					<a href="#"class="btn-secondary">Update Order</a>			
-                    <a href="#"class="btn-danger">Delete Order</a>
-				</td>
-
-			</tr>
-		</table>
 
 
 	</div>

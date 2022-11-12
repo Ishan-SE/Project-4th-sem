@@ -1,71 +1,74 @@
-<?php include('partials/menu.php'); ?>
+<?php include('partials/menu.php'); 
+include('connect.php'); 
+
+?>
 
 
 <div class="main-content">
 	<div class="wrapper">
 			<h1>MANAGE FOOD</h1>
-				<br  />
+				</div>
+
+
+         <button class='btn'><a href="./add-food.php">ADD ITEM</a></button>
 		
-		<a href="#"class="btn-primary">Add Food</a>
 		
-		<br  /><br  /><br  />
+	</div>
+
+	<div>
+    
+
+<table class="text-center">
+	<thead>
+  <tr>
+    <th>S no.</th>
+    <th>Item Name</th>
+    <th>Catagory</th>
+    <th>Discription</th>
+    <th>Price</th>
+    <th>Image</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  	<?php
+      $sql = "Select * from `list`";
+      $result=mysqli_query($con,$sql);
+      if($result){
+      	while($row=mysqli_fetch_assoc($result)){
+      		$id=$row['id'];
+      		$name=$row['name'];
+      		$catagory=$row['catagory'];
+      		$discription=$row['discription'];
+      		$price=$row['price'];
+      		$image=$row['image'];
+      		echo '
+             <tr>
+             <td>'.$id.'</td>
+             <td>'.$name.'</td>
+             <td>'.$catagory.'</td>
+             <td>'.$discription.'</td>
+             <td>'.$price.'</td>
+             <td>'.$image.'</td>
+             <td>
+	             <button><a href="update-food.php?updateid='.$id.'">Update</a></button>
+	             <button><a href="delete-food.php?deleteid='.$id.'">Delete</a></button>
+             </td>
+             </tr>
+             
+
+      		';
+
+      	}
+      }
+  	?>
+  </tbody>
+ 
+  
+</table>
 
 
 
-		<table class="tbl-full">
-			<tr>
-				<th>S.N.</th>
-				<th>Full Name</th>
-				<th>Username</th>
-				<th>Actions</th>
-
-			</tr>
-			<tr>
-				<td>1.</td>
-				<td>Paskim</td>
-				<td>Paskim1</td>
-				<td>
-					
-					<a href="#"class="btn-secondary">Update Food</a>			
-					<a href="#"class="btn-danger">Delete Food</a>			
-				</td>
-
-			</tr>
-			<tr>
-				<td>1.</td>
-				<td>Paskim</td>
-				<td>Paskim1</td>
-				<td>
-					
-					
-					<a href="#"class="btn-secondary">Update Food</a>			
-                    <a href="#"class="btn-danger">Delete Food</a>
-				</td>
-
-			</tr>
-			<tr>
-				<td>1.</td>
-				<td>Paskim</td>
-				<td>Paskim1</td>
-				<td>
-					
-					<a href="#"class="btn-secondary">Update Food</a>			
-                    <a href="#"class="btn-danger">Delete Food</a>
-				</td>
-
-			</tr>
-			<tr>
-				<td>1.</td>
-				<td>Paskim</td>
-				<td>Paskim1</td>
-				<td>
-					
-					<a href="#"class="btn-secondary">Update Food</a>			
-                    <a href="#"class="btn-danger">Delete Food</a>
-				</td>
-
-			</tr>
-		</table>
 
 	</div>
 

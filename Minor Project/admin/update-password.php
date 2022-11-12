@@ -71,27 +71,27 @@ if($res==true)
      if($res2==true)
      {
         $_SESSION['change-pwd'] = "<div class='success'>password changed</div>";
-		header('location:'.SITEURL.'admin/manage-admin.php');
+		header('location:'.SITEURL.'Project-4th-sem/Minor Project/admin/manage-admin.php');
 
      }
      else
      {
       $_SESSION['change-pwd'] = "<div class='error'>password not changeed</div>";
-		header('location:'.SITEURL.'admin/manage-admin.php');
+		header('location:'.SITEURL.'Project-4th-sem/Minor Project/admin/manage-admin.php');
 
      }
      }
      else
      {
         $_SESSION['password-not-matched'] = "<div class='error'>password not matched</div>";
-		header('location:'.SITEURL.'admin/manage-admin.php');
+		header('location:'.SITEURL.'Project-4th-sem/Minor Project/admin/manage-admin.php');
 
      }
 	}
 	else
 	{
 		$_SESSION['user-not-found'] = "<div class='error'>user not found</div>";
-		header('location:'.SITEURL.'admin/manage-admin.php');
+		header('location:'.SITEURL.'Project-4th-sem/Minor Project/admin/manage-admin.php');
 
 	}
 }
