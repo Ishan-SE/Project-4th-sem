@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
 			<label>Image</label>
 			<input type="text" name="image" placeholder="eg ./image/chicken.jepg" required><br><br>
 
-         <button type="submit" name="submit">Add</button>
+         <button type="submit" name="submit" class='btn btn-primary'>Add</button>
 		
 		</form>
 	</div>

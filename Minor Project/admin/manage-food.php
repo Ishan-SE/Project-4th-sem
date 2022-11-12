@@ -4,13 +4,14 @@ include('connect.php');
 ?>
 
 
+
 <div class="main-content">
 	<div class="wrapper">
 			<h1>MANAGE FOOD</h1>
 				</div>
 
 
-         <button class='btn'><a href="./add-food.php">ADD ITEM</a></button>
+         <button class='btn btn-primary' ><a href="./add-food.php"  >ADD ITEM</a></button>
 		
 		
 	</div>
@@ -51,8 +52,8 @@ include('connect.php');
              <td>'.$price.'</td>
              <td>'.$image.'</td>
              <td>
-	             <button><a href="update-food.php?updateid='.$id.'">Update</a></button>
-	             <button><a href="delete-food.php?deleteid='.$id.'">Delete</a></button>
+	             <button><a href="update-food.php?updateid='.$id.'" class="btn-primary">Update</a></button>
+	             <button><a href="delete-food.php?deleteid='.$id.'" class="btn-secondary">Delete</a></button>
              </td>
              </tr>
              

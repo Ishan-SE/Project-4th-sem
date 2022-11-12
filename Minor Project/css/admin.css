@@ -31,11 +31,13 @@ table tr th{
 }
 table tr td{
 	padding: 1%;
+	border:  1px solid black;
 }
 .btn-primary{
 	background-color: #1e90ff;
 	padding: 1%;
 	color: white;
+	alignment-baseline: central;
 	text-decoration: none;
 	font-weight: bold;
 

@@ -20,6 +20,7 @@ $con=new mysqli('localhost','root', '','costumer-order');
     <th>Phone</th>
     <th>Items</th>
     <th>Total</th>
+    <th>Actions</th>
   </tr>
   </thead>
   <tbody>
@@ -59,7 +60,7 @@ $con=new mysqli('localhost','root', '','costumer-order');
   </tbody>
  
   
-</table>
+</table><br><br><br>
 
 <h2> Done </h2> 
 <table class="text-center">
@@ -72,6 +73,7 @@ $con=new mysqli('localhost','root', '','costumer-order');
     <th>Phone</th>
     <th>Items</th>
     <th>Total</th>
+    <th>Actions</th>
   </tr>
   </thead>
   <tbody>
